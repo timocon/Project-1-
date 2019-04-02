@@ -7,7 +7,7 @@ int main(){
     printf("b) Decryption with a rotation cipher key:\n");
     printf("c) Encryption with a substitution cipher given plain text and key:\n");
     printf("d) Decryption with a substitution cipher given plain text and key:\n");
-    
+    // need to make a user input section, week 6 lecture has stuff on it  
     
     
     char d[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // An array for the alphabet using a string
@@ -25,9 +25,9 @@ int main(){
      printf("%s\n", d);
     char c;
    // scanf("%c", c);
-    //c = c - 65;
-   
-    
+    //C = C - 65;
+   // should make the letter C worth the numerical value 3
+    // i think im meant to use this to make the rotation cipher key
     
     
     return 0 ;}
