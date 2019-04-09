@@ -1,6 +1,9 @@
 //hellowolrd
 #include <stdio.h>
-
+int encryptrotationkey ();
+int decryptrotationkey ();
+int encryptsubkey ();
+int decryptsubkey ();
 
 int main(){
     
@@ -17,8 +20,8 @@ int main(){
     //switch (a) {
       //  case 'a': encryptrotationkey(); break;
         //case 'b': decryptrotationkey(); break;
-        //case 'c': encryptsubstitutionkey(); break;
-        //case 'd': decryptsubstitutionkey(); break;
+        //case 'c': encryptsubkey(); break;
+        //case 'd': decryptsubkey(); break;
         //default; printf("unknown option %a\n Please enter a, b, c or d\n", a);
         //a switch statement for the user interface section. dont know if i still need the top section
         // with the printf's 
@@ -28,7 +31,7 @@ int main(){
     
     //char d[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // An array for the alphabet using a string
     //the string was started by using the ""
-    char c[100] = "hello how are you"; 
+    char c[100]; 
     //example letter
     int key = 2;
     
