@@ -10,6 +10,17 @@ int main(){
     printf("b) Decryption with a rotation cipher key:\n");
     printf("c) Encryption with a substitution cipher given plain text and key:\n");
     printf("d) Decryption with a substitution cipher given plain text and key:\n");
+    char a;
+    scanf("%c", &a);
+    switch (a) {
+        case 'a': encryptrotationkey(); break;
+        case 'b': decryptrotationkey(); break;
+        case 'c': encryptsubstitutionkey(); break;
+        case 'd': decryptsubstitutionkey(); break;
+        default; printf("unknown option %a\n Please enter a, b, c or d\n", a);
+        //a switch statement for the user interface section. dont know if i still need the top section
+        // with the printf's 
+    }
     // need to make a user input section, week 6 lecture has stuff on it using a switch with letters  
     
     
@@ -19,16 +30,14 @@ int main(){
     //example letter
     int key = 2;
     
-    //printf("Enter a letter to encrypt: ");
-    //scanf (" %s", c); // scans the letter entered and adds it to char c 
+    printf("Enter a letter to encrypt: ");
+    scanf (" %s", &c); // scans the letter entered and adds it to char c 
    
     int counter = 0;
     for (counter = 0; counter <25; counter++)
     
     {
-        printf("enter a letter:");
-        scanf("%s", &c);
-        
+       
         c[counter] = c[counter] + key;
     }
     
