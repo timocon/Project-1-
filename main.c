@@ -48,9 +48,14 @@ int main(){
        if(c[counter]!=32) //allows you to use space bar
         c[counter] = c[counter] + key;
     }
-    
-    printf("%s\n", c);
-    // the %s lets you type a string, should be the array + the key numeral 
+   //need to put soemthing in so that the letters z and Z can be added to and still get 
+   // a proper letter 
+   
+   printf("%s\n", c);
+   
+   
+   
+   // the %s lets you type a string, should be the array + the key numeral 
     
     
     //printf("%c\n", d[0]); // the letter you want minus 1, 
