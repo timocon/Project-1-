@@ -46,7 +46,8 @@ int main(){
     
     {
        if(c[counter]!=32) //allows you to use space bar
-        c[counter] = c[counter] + key;
+       //else if (d[counter])
+        c[counter] = ((c[counter] - 65)  + key)%26 +65;
     }
    //need to put soemthing in so that the letters z and Z can be added to and still get 
    // a proper letter, something to loop them
