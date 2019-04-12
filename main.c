@@ -33,7 +33,7 @@ int main(){
     //the string was started by using the ""
     char c[100]; 
     //example letter
-    int key = 1; //key is how many letters it needs to move 
+    int key = 2; //key is how many letters it needs to move 
     
     //sizeof(c)/sizeof(char); 
    //'\0' 
@@ -44,21 +44,21 @@ int main(){
     for (counter = 0; counter<10; counter++)
     //for (counter = 0; counter<c[counter]; counter++)
     
-   // {
-      // if(c[counter]!=32) //allows you to use space bar
-       //else if (d[counter])
-        //c[counter] = ((c[counter] - 65)  + key)%26 +65; // loops the Z back around to A
-    //} 
-   //need to put soemthing in so that the letters z and Z can be added to and still get 
-   // a proper letter, something to loop them
+    //Cipher code:
+    
+    {
+      if(c[counter]!=32) //allows you to use space bar
+       c[counter] = ((c[counter] - 65)  + key)%26 +65; // loops the Z back around to A
+    } 
+  
    
-   //printf("%s\n", c);
+   printf("%s\n", c);
    
    
-   //decipher code:
+   //decipher code: looks like this works
    {
        if(c[counter]!=32)
-       c[counter] = ((c[counter] - 65) - key)%26 +65;
+      c[counter] = ((c[counter] - 65) - key)%26 +65;
        //i think this would decrypt a text 
    }
    
