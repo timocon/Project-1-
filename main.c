@@ -37,23 +37,32 @@ int main(){
     
     //sizeof(c)/sizeof(char); 
    //'\0' 
-    printf("Enter a letter to encrypt: ");
+    printf("Enter a letter to encrypt (Caps only): ");
     scanf (" %[^\n]s", c); // scans the letter entered and adds it to char c 
    // [^\n] ignores the space
     int counter = 0;
     for (counter = 0; counter<10; counter++)
     //for (counter = 0; counter<c[counter]; counter++)
     
-    {
-       if(c[counter]!=32) //allows you to use space bar
+   // {
+      // if(c[counter]!=32) //allows you to use space bar
        //else if (d[counter])
-        c[counter] = ((c[counter] - 65)  + key)%26 +65; // loops the Z back around to A
-    } 
+        //c[counter] = ((c[counter] - 65)  + key)%26 +65; // loops the Z back around to A
+    //} 
    //need to put soemthing in so that the letters z and Z can be added to and still get 
    // a proper letter, something to loop them
    
-   printf("%s\n", c);
+   //printf("%s\n", c);
    
+   
+   //decipher code:
+   {
+       if(c[counter]!=32)
+       c[counter] = ((c[counter] - 65) - key)%26 +65;
+       //i think this would decrypt a text 
+   }
+   
+   printf("%s\n", c);
    
    
    // the %s lets you type a string, should be the array + the key numeral 
