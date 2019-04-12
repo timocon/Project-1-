@@ -33,7 +33,7 @@ int main(){
     //the string was started by using the ""
     char c[100]; 
     //example letter
-    int key = 2; //key is how many letters it needs to move 
+    int key = 1; //key is how many letters it needs to move 
     
     //sizeof(c)/sizeof(char); 
    //'\0' 
@@ -47,8 +47,8 @@ int main(){
     {
        if(c[counter]!=32) //allows you to use space bar
        //else if (d[counter])
-        c[counter] = ((c[counter] - 65)  + key)%26 +65;
-    }
+        c[counter] = ((c[counter] - 65)  + key)%26 +65; // loops the Z back around to A
+    } 
    //need to put soemthing in so that the letters z and Z can be added to and still get 
    // a proper letter, something to loop them
    
