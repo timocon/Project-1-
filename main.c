@@ -66,18 +66,6 @@ int main(){
    
    
    // the %s lets you type a string, should be the array + the key numeral 
-    
-    
-    //printf("%c\n", d[0]); // the letter you want minus 1, 
-    //so G is the 7th letter but you'd write 6 
-      //scanf("%s", d);
-    //the %s scans the string
-     //printf("%s\n", d);
-   // scanf("%c", c);
-    //c = c - 65;
-   // should make the letter c worth the numerical value 3
-    // i think im meant to use this to make the rotation cipher key
-    
-    
+     
     return 0 ;}
 //wesavedthis
