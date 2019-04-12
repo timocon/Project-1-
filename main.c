@@ -60,6 +60,7 @@ int main(){
        if(c[counter]!=32)
       c[counter] = ((c[counter] - 65) - key)%26 +65;
        //i think this would decrypt a text 
+       //want to find a way to loop the A to a Z
    }
    
    printf("%s\n", c);
