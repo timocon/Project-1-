@@ -70,6 +70,29 @@ int main(){
    
    
    // the %s lets you type a string, should be the array + the key numeral 
+
+   // Substitution cipher 
+
+    char message;
+    char emessage;//encrypted message
+    char dmessage; // decrypted message
+    int key;
+    key = key%26 ;
+    char d [100]; 
+    char e [100];
+    char f [100];
+    
+    printf("enter the key"\n);
+    scanf(%d, &key);
+    
+
+
+
+
+
+
+
+
      
     return 0 ;}
 //wesavedthis
