@@ -151,13 +151,5 @@ int main(){
     getc();
     
 
-
-
-
-
-
-
-
-     
     return 0 ;}
 //wesavedthis
