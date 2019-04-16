@@ -76,7 +76,8 @@ int main(){
     char message;
     char emessage;//encrypted message
     char dmessage; // decrypted message
-    int key;
+    int key; // int key was used earlier for the rotation cipher
+    // if i put everything into functions will it ignore the other int key
     key = key%26 ;
     char d [100]; // array for message
     char e [100]; // array for emessage
