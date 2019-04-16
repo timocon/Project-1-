@@ -78,12 +78,76 @@ int main(){
     char dmessage; // decrypted message
     int key;
     key = key%26 ;
-    char d [100]; 
-    char e [100];
-    char f [100];
+    char d [100]; // array for message
+    char e [100]; // array for emessage
+    char f [100]; // array for dmessage
+    int temp;
     
     printf("enter the key"\n);
     scanf(%d, &key);
+    printf("enter message"\n);
+    gets(message); // read a line from stdin and stores it at a location ()
+    for (d=0; message[d]!=NULL; d++)
+        message[d] = tolower(message[d]); 
+        // tolower converts letters to lowercase
+    for (d=0; message[d]!=NULL; i++);
+    {
+        printf("%c", message[d]);
+        if (message[d]==' ')
+            emessage[e++]=message[d];
+            else {
+                if(message[d]>=48 && message[d] <=57) //this line down to the next } allows
+                // you to add numbers, so i can probably just delete this if it doesnt work
+                // as its not needed
+                
+            
+              else // this next part is for the lowercase letters
+              // the next few lines should make it so that if value and key equal more than 123 it goes back to the start
+                {
+                    if (message[d]>=97 && message[d]<=123)
+                    {
+                        temp=message[d]+key;
+                        if(temp>122)
+                            emessage[e++]=97+(temp-123);
+                            else 
+                            emessage [e++]= temp;
+                    }
+                    else 
+                        emessage[e++]=message[d];
+                }
+                printf("%c", emessage[e]);
+            }
+    }
+    emessage[e]='\0';
+    printf("Encrypted message is \n");
+    for (d=0; emessage[d]!=NULL; d++)
+        printf("%c", emessage[d]);
+    
+    for (d=0, e=0; emessage[d]!=NULL; d++)
+    {
+        if(emessage[d]==' ')
+            dmessage[e++]=emessage[d];
+            else
+            {
+                if(emessage[d]>=97 && emessage[d]<=123)
+                {
+                    temp=emessage[d]-key;
+                    if (temp<97)
+                        dmessage[e++]=123-(97-temp);
+                        else
+                            dmessage[e++]=temp;
+                }
+
+                else 
+                dmessage[e++]=emessage[d];
+            }
+    }
+    
+    dmessage[e]='\0';
+    printf("Decrypted message is: \n");
+    for (d=0; dmessage[d]!=NULL; d++)
+        printf("%c", dmessage[d]);
+    getc();
     
 
 
