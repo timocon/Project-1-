@@ -1,8 +1,18 @@
 //hellowolrd
 #include <stdio.h>
 int encryptrotationkey ();
+
+
+
 int decryptrotationkey ();
+
+
+
+
 int encryptsubkey ();
+
+
+
 int decryptsubkey ();
 
 int main(){
@@ -10,22 +20,25 @@ int main(){
     
     
     // Made a menu interface which comes up with the first 4 options for the project
-   // printf("Please select an option\n");
-    //printf("a) Encryption with a rotation cipher key:\n");
-    //printf("b) Decryption with a rotation cipher key:\n");
-    //printf("c) Encryption with a substitution cipher given plain text and key:\n");
-    //printf("d) Decryption with a substitution cipher given plain text and key:\n");
-    //char a;
-    //scanf("%c", &a);
+    printf("Please select an option\n");
+    printf("a) Encryption with a rotation cipher key:\n");
+    printf("b) Decryption with a rotation cipher key:\n");
+    printf("c) Encryption with a substitution cipher given plain text and key:\n");
+    printf("d) Decryption with a substitution cipher given plain text and key:\n");
+    char a;
+    scanf("%c", &a);
     
-    //switch (a) {
-      //  case 'a': encryptrotationkey(); break;
-        //case 'b': decryptrotationkey(); break;
-        //case 'c': encryptsubkey(); break;
-        //case 'd': decryptsubkey(); break;
-        //default: printf("unknown option %d\n Please enter a, b, c or d\n", a);
-    //}
-
+    while(c <'a' || c > 'd') // make the menu input only read the letters a,b,c,d 
+     
+    switch (a) 
+        {
+        case 'a': encryptrotationkey(); break;
+        case 'b': decryptrotationkey(); break;
+        case 'c': encryptsubkey(); break;
+        case 'd': decryptsubkey(); break;
+        default: printf("unknown option %d\n Please enter a, b, c or d\n", a);
+        }
+// need to add file input 
         //a switch statement for the user interface section. dont know if i still need the top section
         // with the printf's 
     
@@ -44,7 +57,7 @@ int main(){
     scanf (" %[^\n]s", c); // scans the letter entered and adds it to char c 
    // [^\n] ignores the space
     int counter = 0;
-    for (counter = 0; counter<10; counter++)
+    for (counter = 0; counter<100; counter++)
     //for (counter = 0; counter<c[counter]; counter++)
     
     //Cipher code:
