@@ -1,10 +1,8 @@
 //hellowolrd
 #include <stdio.h>
-int encryptrotationkey ();
+int encryptrotationkey (char c, int key);
 
-
-
-int decryptrotationkey ();
+int decryptrotationkey (char c, int key);
 
 
 
@@ -47,19 +45,20 @@ int main(){
     
     //char d[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // An array for the alphabet using a string
     //the string was started by using the ""
-    char c[100]; 
-    //example letter
+    
+    
+    int encryptrotationkey (char c, int key);
+    {
+    char c[100]; //example letter
     int key = 2; //key is how many letters it needs to move 
     
-    //sizeof(c)/sizeof(char); 
-   //'\0' 
+
     printf("Enter a letter to encrypt (Caps only): ");
     scanf (" %[^\n]s", c); // scans the letter entered and adds it to char c 
-   // [^\n] ignores the space
+    // [^\n] ignores the space
     int counter = 0;
     for (counter = 0; counter<100; counter++)
     //for (counter = 0; counter<c[counter]; counter++)
-    
     //Cipher code:
     
     {
@@ -67,20 +66,21 @@ int main(){
        c[counter] = ((c[counter] - 65)  + key)%26 +65; // loops the Z back around to A
     } 
   
-   
-   printf("%s\n", c);
-   
+    printf("%s\n", c);
+    }   
+
    
    //decipher code: looks like this works
+   int decryptrotationkey (char c, int key);
    {
+       char c[100]; 
+       int key = 2;
        if(c[counter]!=32)
-      c[counter] = ((c[counter] - 65) - key)%26 +65;
-       //i think this would decrypt a text 
+       c[counter] = ((c[counter] - 65) - key)%26 +65;
+       
        //want to find a way to loop the A to a Z
+       printf("%s\n", c);
    }
-   
-   printf("%s\n", c);
-   
    
    // the %s lets you type a string, should be the array + the key numeral 
 
