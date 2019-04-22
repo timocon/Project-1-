@@ -1,4 +1,4 @@
-//hellowolrd
+
 #include <stdio.h>
 int encryptrotationkey (char c, int key);
 
@@ -21,12 +21,12 @@ int main(){
     char a;
     scanf("%c", &a);
     
-    while(c <'a' || c > 'd') // make the menu input only read the letters a,b,c,d 
+    while(a <'a' || a > 'd') // make the menu input only read the letters a,b,c,d 
      
     switch (a) 
         {
-        case 'a': encryptrotationkey(); break;
-        case 'b': decryptrotationkey(); break;
+        case 'a': encryptrotationkey(printf ("Encrypted letters are: %s\n",  )); break;
+        case 'b': decryptrotationkey(printf ("Decrypted letters are: %s\n", )); break;
         case 'c': encryptsubkey(); break;
         case 'd': decryptsubkey(); break;
         default: printf("unknown option %d\n Please enter a, b, c or d\n", a);
@@ -41,10 +41,7 @@ int main(){
 // need to add file input 
         //a switch statement for the user interface section. dont know if i still need the top section
         // with the printf's 
-    
-    // need to make a user input section, week 6 lecture has stuff on it using a switch with letters  
-    
-    
+ 
     //char d[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // An array for the alphabet using a string
     //the string was started by using the ""
     
@@ -130,6 +127,10 @@ int encryptsubkey (char message, char emessage, char dmessage, int key, int temp
     }
     emessage[e]='\0';
     printf("Encrypted message is \n");
+    
+    
+    //decrypting messaging section below
+    
     for (d=0; emessage[d]!=NULL; d++)
         printf("%c", emessage[d]);
     
