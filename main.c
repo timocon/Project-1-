@@ -4,14 +4,9 @@ int encryptrotationkey (char c, int key);
 
 int decryptrotationkey (char c, int key);
 
+int encryptsubkey (char message, char emessage, char dmessage, int key, int temp, char e, char d, char f);
 
-
-
-int encryptsubkey ();
-
-
-
-int decryptsubkey ();
+int decryptsubkey (void);
 
 int main(){
     
@@ -36,6 +31,13 @@ int main(){
         case 'd': decryptsubkey(); break;
         default: printf("unknown option %d\n Please enter a, b, c or d\n", a);
         }
+        
+        
+} //the functions have to be defined below main? 
+
+
+
+
 // need to add file input 
         //a switch statement for the user interface section. dont know if i still need the top section
         // with the printf's 
@@ -51,22 +53,20 @@ int main(){
     {
     char c[100]; //example letter
     int key = 2; //key is how many letters it needs to move 
-    
-
     printf("Enter a letter to encrypt (Caps only): ");
     scanf (" %[^\n]s", c); // scans the letter entered and adds it to char c 
     // [^\n] ignores the space
     int counter = 0;
     for (counter = 0; counter<100; counter++)
-    //for (counter = 0; counter<c[counter]; counter++)
-    //Cipher code:
-    
+   
+   
     {
       if(c[counter]!=32) //allows you to use space bar
        c[counter] = ((c[counter] - 65)  + key)%26 +65; // loops the Z back around to A
     } 
   
     printf("%s\n", c);
+    return c;
     }   
 
    
@@ -75,15 +75,19 @@ int main(){
    {
        char c[100]; 
        int key = 2;
+       printf("Enter a letter to encrypt (Caps only): ");
+       scanf (" %[^\n]s", c);
        if(c[counter]!=32)
        c[counter] = ((c[counter] - 65) - key)%26 +65;
        
        //want to find a way to loop the A to a Z
        printf("%s\n", c);
+       return c; //not sure if this is right?
    }
    
    // the %s lets you type a string, should be the array + the key numeral 
-
+int encryptsubkey (char message, char emessage, char dmessage, int key, int temp, char e, char d, char f);
+    {
    // Substitution cipher 
 
     char message;
@@ -110,15 +114,7 @@ int main(){
         if (message[d]==' ')
             emessage[e++]=message[d];
             else {
-                if(message[d]>=48 && message[d] <=57) //this line down to the next } allows
-                // you to add numbers, so i can probably just delete this if it doesnt work
-                // as its not needed
-                
-            
-              else // this next part is for the lowercase letters
-              // the next few lines should make it so that if value and key equal more than 123 it goes back to the start
-                {
-                    if (message[d]>=97 && message[d]<=123)
+                if (message[d]>=97 && message[d]<=123)
                     {
                         temp=message[d]+key;
                         if(temp>122)
@@ -157,6 +153,10 @@ int main(){
             }
     }
     
+    return void;
+    }
+
+    
     dmessage[e]='\0';
     printf("Decrypted message is: \n");
     for (d=0; dmessage[d]!=NULL; d++)
@@ -165,4 +165,3 @@ int main(){
     
 
     return 0 ;}
-//wesavedthis
