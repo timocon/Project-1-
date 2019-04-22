@@ -1,11 +1,9 @@
-
 #include <stdio.h>
 int encryptrotationkey (char c, int key);
 
 int decryptrotationkey (char c, int key);
 
 int encryptsubkey (char message, char emessage, char dmessage, int key, int temp, char e, char d, char f);
-
 int decryptsubkey (void);
 
 int main(){
