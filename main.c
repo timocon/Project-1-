@@ -1,9 +1,9 @@
 #include <stdio.h>
+#include <string.h>
 char encryptrotationkey (char *c, int key);
 char decryptrotationkey (char *c, int key);
 
-char encryptsubkey (char message, char emessage, char dmessage, int key, int temp, char e, char d, char f);
-char decryptsubkey (void);
+char encryptsubkey ()
 
 int main(){
     
@@ -82,19 +82,21 @@ int main(){
        printf("%s\n", c);
        return c; //not sure if this is right?
    }
+
+//substitution key
    
- #include <stdio.h>
-#include <strings.h>
+#include <stdio.h>
+#include <string.h>
 char *encryption (char[]);
 void *decryption (char[]);
 char alpha[26] ={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
 char key [26];
 void main ()
 {
-    int i, key, choixe, flag=0;
+    int i, key, choice, flag=0;
     char *c_text, msg[255];
     printf("\n --- Substitution Cipher Code ---\n");
-    printf"Enter plain text :");
+    printf("\nEnter plain text :");
     scanf("%[^\n]", msg);
     printf("\n Your plain text message is : %s", msg);
     do {
@@ -159,6 +161,14 @@ void *decryption(char cipher_text[]){
 
 
 
+
+
+
+
+
+
+
+        
 
 
 
