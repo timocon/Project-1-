@@ -22,7 +22,7 @@ int main(){
      
     switch (a) 
         {
-        case 'a': encryptrotationkey( c, key); break;
+        case 'a': encryptrotationkey(char c, int key); break;
         case 'b': decryptrotationkey(); break;
         case 'c': encryptsubkey(); break;
         case 'd': decryptsubkey(); break;
@@ -43,7 +43,7 @@ int main(){
     //the string was started by using the ""
     
     
-    char * encryptrotationkey ()
+    char * encryptrotationkey (char c, int key)
     {
     char c[100]; //example letter
     int key = 2; //key is how many letters it needs to move 
@@ -56,6 +56,7 @@ int main(){
    
     {
       if(c[counter]!=32) //allows you to use space bar
+      if(c[counter]!=58)
        c[counter] = ((c[counter] - 65)  + key)%26 +65; // loops the Z back around to A
     } 
   
@@ -68,12 +69,15 @@ int main(){
    int decryptrotationkey (char c, int key);
    {
        char c[100]; 
-       int key = 2;
+       int key = 1;
+       int counter = 0;
        printf("Enter a letter to encrypt (Caps only): ");
        scanf (" %[^\n]s", c);
+       for (counter = 0; counter<100; counter++)
        if(c[counter]!=32)
+       if(c[counter]!=58)
+      // if (c[counter] 65 +26 )
        c[counter] = ((c[counter] - 65) - key)%26 +65;
-       
        //want to find a way to loop the A to a Z
        printf("%s\n", c);
        return c; //not sure if this is right?
