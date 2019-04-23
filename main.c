@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <string.h>
-char encryptrotationkey (char *c, int key);
-char decryptrotationkey (char *c, int key);
+char *encryptrotationkey (char []);
+char *decryptrotationkey (char[]);
+char *encryption (char[]);
+void *decryption (char[]);
 
-char encryptsubkey ()
 
 int main(){
     
@@ -85,8 +86,7 @@ int main(){
 
 //substitution key
    
-#include <stdio.h>
-#include <string.h>
+
 char *encryption (char[]);
 void *decryption (char[]);
 char alpha[26] ={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
