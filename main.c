@@ -1,15 +1,13 @@
 #include <stdio.h>
 #include <string.h>
-char *encryptrotationkey (char []);
-char *decryptrotationkey (char[]);
-char *encryption (char[]);
-void *decryption (char[]);
+char *encryptrotationkey (char []); //caesar cipher encryption function
+char *decryptrotationkey (char[]); //caesar cipher decryption function
+char *encryption (char[]);// substitution cipher encryption function
+void *decryption (char[]);// substitution cipher decryption function
 
 
 int main(){
-    
-    
-    
+
     // Made a menu interface which comes up with the first 4 options for the project
     printf("Please select an option\n");
     printf("a) Encryption with a rotation cipher key:\n");
@@ -40,10 +38,6 @@ int main(){
         //a switch statement for the user interface section. dont know if i still need the top section
         // with the printf's 
  
-    //char d[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // An array for the alphabet using a string
-    //the string was started by using the ""
-    
-    
     char * encryptrotationkey (char c, int key)
     {
     char c[100]; //example letter
@@ -91,9 +85,10 @@ char *encryption (char[]);
 void *decryption (char[]);
 char alpha[26] ={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
 char key [26];
-void main ()
+int main ()
 {
-    int i, key, choice, flag=0;
+    int choice, flag=0;
+    //int i, key
     char *c_text, msg[255];
     printf("\n --- Substitution Cipher Code ---\n");
     printf("\nEnter plain text :");
@@ -122,12 +117,12 @@ void main ()
     }while (choice !=0);
 }
 char *encrpytion (char cipher_text[]){
-    int i, val, j;
+    int i, j;
     printf("enter the unique key of 26 characters for encryption :");
     scanf("%s", key);
     printf("\ncharacter replaced\n");
     printf("\nabcdefghijklmnopqrstuvwxyz\n");
-        printf("||||||||||||||||||||||||||")
+        printf("||||||||||||||||||||||||||");
     printf("\n%s\n", key);
     for (i=0; i<strlen(cipher_text); i++){
         for (j=0; j<26; j++)
@@ -142,7 +137,7 @@ char *encrpytion (char cipher_text[]){
     return cipher_text;
 }
 void *decryption(char cipher_text[]){
-    int i, val, j;
+    int i, j;
     char cipher[255];
     strcpy(cipher, cipher_text);
     printf("\n Decryption process \n");
@@ -157,23 +152,9 @@ void *decryption(char cipher_text[]){
         }
     }
      printf("\nDecrypted text %s", cipher);
+     return cipher_text;
 }
 
 
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
+      
         
