@@ -84,9 +84,9 @@ int encryptsubkey (char message, char emessage, char dmessage, int key, int temp
     {
    // Substitution cipher 
 
-    char message;
-    char emessage;//encrypted message
-    char dmessage; // decrypted message
+    char *message;
+    char *emessage;//encrypted message
+    char *dmessage; // decrypted message
     int key; // int key was used earlier for the rotation cipher
     // if i put everything into functions will it ignore the other int key
     key = key%26 ;
