@@ -1,10 +1,9 @@
 #include <stdio.h>
-int encryptrotationkey (char c, int key);
+char encryptrotationkey (char *c, int key);
+char decryptrotationkey (char *c, int key);
 
-int decryptrotationkey (char c, int key);
-
-int encryptsubkey (char message, char emessage, char dmessage, int key, int temp, char e, char d, char f);
-int decryptsubkey (void);
+char encryptsubkey (char message, char emessage, char dmessage, int key, int temp, char e, char d, char f);
+char decryptsubkey (void);
 
 int main(){
     
@@ -23,8 +22,8 @@ int main(){
      
     switch (a) 
         {
-        case 'a': encryptrotationkey(printf ("Encrypted letters are: %s\n",  )); break;
-        case 'b': decryptrotationkey(printf ("Decrypted letters are: %s\n", )); break;
+        case 'a': encryptrotationkey( c, key); break;
+        case 'b': decryptrotationkey(); break;
         case 'c': encryptsubkey(); break;
         case 'd': decryptsubkey(); break;
         default: printf("unknown option %d\n Please enter a, b, c or d\n", a);
@@ -44,7 +43,7 @@ int main(){
     //the string was started by using the ""
     
     
-    int encryptrotationkey (char c, int key);
+    char * encryptrotationkey ()
     {
     char c[100]; //example letter
     int key = 2; //key is how many letters it needs to move 
@@ -61,7 +60,7 @@ int main(){
     } 
   
     printf("%s\n", c);
-    return c;
+    return encryptrotationkey;
     }   
 
    
@@ -96,9 +95,9 @@ int encryptsubkey (char message, char emessage, char dmessage, int key, int temp
     char f [100]; // array for dmessage
     int temp;
     
-    printf("enter the key"\n);
+    printf("enter the key\n");
     scanf(%d, &key);
-    printf("enter message"\n);
+    printf("enter message\n");
     gets(message); // read a line from stdin and stores it at a location ()
     for (d=0; message[d]!=NULL; d++)
         message[d] = tolower(message[d]); 
@@ -163,4 +162,5 @@ int encryptsubkey (char message, char emessage, char dmessage, int key, int temp
     getc();
     
 
-    return 0 ;}
+    return 0 ;
+    }
