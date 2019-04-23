@@ -83,88 +83,87 @@ int main(){
        return c; //not sure if this is right?
    }
    
-   // the %s lets you type a string, should be the array + the key numeral 
-int encryptsubkey (char message, char emessage, char dmessage, int key, int temp, char e, char d, char f);
-    {
-   // Substitution cipher 
-
-    char *message;
-    char *emessage;//encrypted message
-    char *dmessage; // decrypted message
-    int key; // int key was used earlier for the rotation cipher
-    // if i put everything into functions will it ignore the other int key
-    key = key%26 ;
-    char d [100]; // array for message
-    char e [100]; // array for emessage
-    char f [100]; // array for dmessage
-    int temp;
-    
-    printf("enter the key\n");
-    scanf(%d, &key);
-    printf("enter message\n");
-    gets(message); // read a line from stdin and stores it at a location ()
-    for (d=0; message[d]!=NULL; d++)
-        message[d] = tolower(message[d]); 
-        // tolower converts letters to lowercase
-    for (d=0; message[d]!=NULL; i++);
-    {
-        printf("%c", message[d]);
-        if (message[d]==' ')
-            emessage[e++]=message[d];
-            else {
-                if (message[d]>=97 && message[d]<=123)
-                    {
-                        temp=message[d]+key;
-                        if(temp>122)
-                            emessage[e++]=97+(temp-123);
-                            else 
-                            emessage [e++]= temp;
-                    }
-                    else 
-                        emessage[e++]=message[d];
-                }
-                printf("%c", emessage[e]);
-            }
-    }
-    emessage[e]='\0';
-    printf("Encrypted message is \n");
-    
-    
-    //decrypting messaging section below
-    
-    for (d=0; emessage[d]!=NULL; d++)
-        printf("%c", emessage[d]);
-    
-    for (d=0, e=0; emessage[d]!=NULL; d++)
-    {
-        if(emessage[d]==' ')
-            dmessage[e++]=emessage[d];
-            else
-            {
-                if(emessage[d]>=97 && emessage[d]<=123)
-                {
-                    temp=emessage[d]-key;
-                    if (temp<97)
-                        dmessage[e++]=123-(97-temp);
-                        else
-                            dmessage[e++]=temp;
-                }
-
+ #include <stdio.h>
+#include <strings.h>
+char *encryption (char[]);
+void *decryption (char[]);
+char alpha[26] ={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+char key [26];
+void main ()
+{
+    int i, key, choixe, flag=0;
+    char *c_text, msg[255];
+    printf("\n --- Substitution Cipher Code ---\n");
+    printf"Enter plain text :");
+    scanf("%[^\n]", msg);
+    printf("\n Your plain text message is : %s", msg);
+    do {
+        printf("\npress 1 for encryption \npress 2 for decryption \npress '0' for exit \n");
+        scanf ("%d", &choice);
+        switch (choice){
+            case 1:
+                c_text=encryption(msg);
+                flag=1;
+                break;
+            case 2:
+                if (flag==1)
+                decryption (c_text);
                 else 
-                dmessage[e++]=emessage[d];
+                    printf("first perform encryption process");
+                break;
+            case 0 :
+                break;
+            default :
+                printf("\nplease enter valid choice\n");
+                break;
+        }
+    }while (choice !=0);
+}
+char *encrpytion (char cipher_text[]){
+    int i, val, j;
+    printf("enter the unique key of 26 characters for encryption :");
+    scanf("%s", key);
+    printf("\ncharacter replaced\n");
+    printf("\nabcdefghijklmnopqrstuvwxyz\n");
+        printf("||||||||||||||||||||||||||")
+    printf("\n%s\n", key);
+    for (i=0; i<strlen(cipher_text); i++){
+        for (j=0; j<26; j++)
+        {
+            if(alpha[j]==cipher_text[i]){
+                cipher_text [i] =key[j];
+                break;
             }
+        }
     }
-    
-    return void;
+    printf("\nYour encrypted msg is: %s", cipher_text);
+    return cipher_text;
+}
+void *decryption(char cipher_text[]){
+    int i, val, j;
+    char cipher[255];
+    strcpy(cipher, cipher_text);
+    printf("\n Decryption process \n");
+        for(i=0; i <strlen(cipher); i++) {
+            for (j=0; j<26; j++)
+            {
+                if (cipher[i]==key[j])
+                {
+                    cipher[i]=alpha[j];
+                    break;
+                }
+        }
     }
+     printf("\nDecrypted text %s", cipher);
+}
 
-    
-    dmessage[e]='\0';
-    printf("Decrypted message is: \n");
-    for (d=0; dmessage[d]!=NULL; d++)
-        printf("%c", dmessage[d]);
-    getc();
-    
 
-    return 0 ;
-    }
+
+
+
+
+
+
+
+
+        
