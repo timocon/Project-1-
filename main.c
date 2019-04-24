@@ -29,15 +29,9 @@ int main(){
         }
         
         
-} //the functions have to be defined below main? 
-
-
-
-
+} 
 // need to add file input 
-        //a switch statement for the user interface section. dont know if i still need the top section
-        // with the printf's 
- 
+     
     char * encryptrotationkey (char c, int key)
     {
     char c[100]; //example letter
@@ -156,5 +150,53 @@ void *decryption(char cipher_text[]){
 }
 
 
+ //////////////////////////////////////////////////////////
+ ///the switch statements have some errors that dont let the substitution ciphers run
+ // so i rewrote them to work individually 
+ 
+//#include <stdio.h>
+//#include <string.h>
+
+//char *encrpytion (char cipher_text[])
+
+char alpha[26] ={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+char key [26];
+char cipher_text[];
+int main ()
+{
+    
+      char *c_text, msg[255];
+    printf("\n --- Substitution Cipher Code ---\n");
+    printf("\nEnter plain text :");
+    scanf("%[^\n]", msg);
+    printf("\n Your plain text message is : %s", msg);
+    
+    int i, j;
+    printf("\nenter the unique key of 26 characters for encryption :");
+    scanf("%s", key);
+    printf("\ncharacter replaced\n");
+    printf("\nabcdefghijklmnopqrstuvwxyz\n");
+        printf("||||||||||||||||||||||||||");
+    printf("\n%s\n", key);
+    for (i=0; i<strlen(msg); i++){ // switch out cipher_text with msg
+        for (j=0; j<26; j++)
+        {
+            if(alpha[j]==msg[i]){ // switch out cipher_text with msg 
+                msg [i] =key[j]; // switch out cipher_text with msg 
+                break;
+            }
+        }
+    }
+    //c_text = encryption(msg) 
+    // in the function encryption (cipher_text[])
+    // msg should equal the cipher text and ma
+    
+    
+    
+   // key = c_text;
+    printf("\nYour encrypted msg is: %s", msg);
+    return msg;
+}
+      ///////////////////////////////////////////////////
+      //////////////////////////////////////////////////
       
-        
