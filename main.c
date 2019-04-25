@@ -175,7 +175,6 @@ int main ()
     // msg should equal the cipher text and ma
     
     
-    
    // key = c_text;
     printf("\nYour decrypted msg is: %s", msg);
     return msg;
