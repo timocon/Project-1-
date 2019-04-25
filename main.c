@@ -37,8 +37,8 @@ int main(){
  
     char * encryptrotationkey (char c, int key)
     {
-    char c[100]; //example letter
-    int key = 2; //key is how many letters it needs to move 
+    char c[100]; //array number equals how many letters can be encrypted
+    int key = 2; //key is how many letters it needs to move to the right 
     printf("Enter a letter to encrypt (Caps only): ");
     scanf (" %[^\n]s", c); // scans the letter entered and adds it to char c 
     // [^\n] ignores the space
@@ -61,8 +61,8 @@ int main(){
    //int decryptrotationkey (char c, int key);
    int main()
    {
-       char c[100]; 
-       int key = 5;
+       char c[100]; //array number equals how many letters can be decrypted
+       int key = 5; 
        key = 26 - key; //cant figure out how to make a go to z 
        // but using 26 minus the key does it by rotating to the right 
        //using the total letters in the alphabet - the key 
@@ -70,14 +70,14 @@ int main(){
        printf("Enter a letter to encrypt (Caps only): ");
        scanf (" %[^\n]s", c);
        for (counter = 0; counter<100; counter++)
-       if(c[counter]!=32)
-       if(c[counter]!=58)
+       if(c[counter]!=32)// makes the key ignore ' ' (blank space/space bar)
+       if(c[counter]!=58)// makes the key ignore ':' 
       // if (c[counter] 65 +26 )
        c[counter] = ((c[counter] - 65) + key)%26 +65;
        // was going to use ((c[counter]- 65) -key) but that 
        // makes the rotation go left and i dont know how to make the a turn in a z
+       //this way i can make the key work properly and get a to turn to z 
        
-       //want to find a way to loop the A to a Z
        printf("%s\n", c);
        return c; //not sure if this is right?
    }
