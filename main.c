@@ -22,7 +22,7 @@ int main(){
     switch (a) 
         {
         case 'a': 
-                    printf("Enter your char:\n");
+                    printf("Enter a word:\n");
                     char 1;
                     scanf("%c", &1);
                     printf("Enter your key:\n");
@@ -30,15 +30,29 @@ int main(){
                     scanf("%d", &2);
         encryptrotationkey(1,2); break;
         case 'b':
-                    printf("Enter your char:\n");
+                    printf("Enter a word :\n");
                     char 1;
                     scanf("%c", &1);
                     printf("Enter your key:\n");
                     int 2;
                     scanf("%d", &2);
         decryptrotationkey(1,2); break;
-        case 'c': encryptsubkey(); break;
-        case 'd': decryptsubkey(); break;
+        case 'c': 
+                    printf("Enter a word :\n");
+                    char 1;
+                    scanf("%c", &1);
+                    printf("Enter your key:\n");
+                    char 2;
+                    scanf("%d", &2);
+        encryptsubkey(); break;
+        case 'd': 
+                    printf("Enter a word :\n");
+                    char 1;
+                    scanf("%c", &1);
+                    printf("Enter your key:\n");
+                    char 2;
+                    scanf("%d", &2);
+        decryptsubkey(); break;
         default: printf("unknown option %d\n Please enter a, b, c or d\n", a);
         }
         
