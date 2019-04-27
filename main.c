@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <string.h>
-char *encryptrotationkey (char, int); //caesar cipher encryption function
-char *decryptrotationkey (char, int); //caesar cipher decryption function
-char *encryption (char, int);// substitution cipher encryption function
-void *decryption (char, int);// substitution cipher decryption function
+char encryptrotationkey (char, int); //caesar cipher encryption function
+char decryptrotationkey (char, int); //caesar cipher decryption function
+char encryption (char, char);// substitution cipher encryption function
+char decryption (char, char);// substitution cipher decryption function
 
 
 int main(){
@@ -44,7 +44,7 @@ int main(){
                     printf("Enter your key:\n");
                     char 2;
                     scanf("%d", &2);
-        encryptsubkey(); break;
+        encryptsubkey(1,2); break;
         case 'd': 
                     printf("Enter a word :\n");
                     char 1;
@@ -52,7 +52,7 @@ int main(){
                     printf("Enter your key:\n");
                     char 2;
                     scanf("%d", &2);
-        decryptsubkey(); break;
+        decryptsubkey(1,2); break;
         default: printf("unknown option %d\n Please enter a, b, c or d\n", a);
         }
         
@@ -63,17 +63,17 @@ int main(){
  ///////////////////////////////////////////////
  //////////////////////////////////////////////
  
-    char * encryptrotationkey (char c, int key)
+    char encryptrotationkey (char c, int key)
     {
     char c[100]; //array number equals how many letters can be encrypted
-    int key = 2; //key is how many letters it needs to move to the right 
+    int key; //key is how many letters it needs to move to the right 
     printf("Enter a letter to encrypt (Caps only): ");
     scanf (" %[^\n]s", c); // scans the letter entered and adds it to char c 
     // [^\n] ignores the space
     printf("Enter a number key:");
     scanf("%d", &key);
     int counter = 0;
-    for (counter = 0; counter<100; counter++)
+    for (counter = 0; counter<50; counter++) // change the '<' number for how much output you want
     {
       if(c[counter]!=32) //allows you to use space bar
       if(c[counter]!=58)
@@ -88,11 +88,12 @@ int main(){
 //#include<stdio.h>
 
 //decipher code: looks like this works
-   //int decryptrotationkey (char c, int key);
-   int main()
+   
+   char decryptrotationkey (char, int);
+  // int main()
    {
        char c[100]; //array number equals how many letters can be decrypted
-       int key = 5; 
+       int key ; 
        key = 26 - key; //cant figure out how to make a go to z 
        // but using 26 minus the key does it by rotating to the right 
        //using the total letters in the alphabet - the key 
@@ -101,7 +102,7 @@ int main(){
        scanf (" %[^\n]s", c);
        printf("Enter a number key:");
        scanf("%d", &key);
-       for (counter = 0; counter<100; counter++)
+       for (counter = 0; counter<50; counter++) // change the '<' number for how much output you want
        if(c[counter]!=32)// makes the key ignore ' ' (blank space/space bar)
        if(c[counter]!=58)// makes the key ignore ':' 
       // if (c[counter] 65 +26 )
@@ -125,7 +126,7 @@ int main(){
 //#include <stdio.h>
 //#include <string.h>
 
-//char *encrpytion (char cipher_text[])
+char encrpytion (char cipher_text, char key)
 
 char alpha[26] ={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
 char key [26];
@@ -133,7 +134,7 @@ char cipher_text[];
 int main ()
 {
     
-      char *c_text, msg[255];
+    char *c_text, msg[255];
     printf("\n --- Substitution Cipher Code ---\n");
     printf("\nEnter plain text :");
     scanf("%[^\n]", msg);
@@ -172,6 +173,8 @@ int main ()
       //#include <string.h>
 
 //sub decryption
+
+char decryption (char cipher_text, char key)
 
 char alpha[26] ={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
 char key [26];
