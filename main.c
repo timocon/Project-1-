@@ -70,6 +70,8 @@ int main(){
     printf("Enter a letter to encrypt (Caps only): ");
     scanf (" %[^\n]s", c); // scans the letter entered and adds it to char c 
     // [^\n] ignores the space
+    printf("Enter a number key:");
+    scanf("%d", &key);
     int counter = 0;
     for (counter = 0; counter<100; counter++)
     {
@@ -97,6 +99,8 @@ int main(){
        int counter = 0;
        printf("Enter a letter to encrypt (Caps only): ");
        scanf (" %[^\n]s", c);
+       printf("Enter a number key:");
+       scanf("%d", &key);
        for (counter = 0; counter<100; counter++)
        if(c[counter]!=32)// makes the key ignore ' ' (blank space/space bar)
        if(c[counter]!=58)// makes the key ignore ':' 
