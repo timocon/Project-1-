@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <string.h>
-char *encryptrotationkey (char []); //caesar cipher encryption function
-char *decryptrotationkey (char[]); //caesar cipher decryption function
-char *encryption (char[]);// substitution cipher encryption function
-void *decryption (char[]);// substitution cipher decryption function
+char *encryptrotationkey (char, int); //caesar cipher encryption function
+char *decryptrotationkey (char, int); //caesar cipher decryption function
+char *encryption (char, int);// substitution cipher encryption function
+void *decryption (char, int);// substitution cipher decryption function
 
 
 int main(){
@@ -21,8 +21,22 @@ int main(){
      
     switch (a) 
         {
-        case 'a': encryptrotationkey(char c, int key); break;
-        case 'b': decryptrotationkey(); break;
+        case 'a': 
+                    printf("Enter your char:\n");
+                    char 1;
+                    scanf("%c", &1);
+                    printf("Enter your key:\n");
+                    int 2;
+                    scanf("%d", &2);
+        encryptrotationkey(1,2); break;
+        case 'b':
+                    printf("Enter your char:\n");
+                    char 1;
+                    scanf("%c", &1);
+                    printf("Enter your key:\n");
+                    int 2;
+                    scanf("%d", &2);
+        decryptrotationkey(1,2); break;
         case 'c': encryptsubkey(); break;
         case 'd': decryptsubkey(); break;
         default: printf("unknown option %d\n Please enter a, b, c or d\n", a);
