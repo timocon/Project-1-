@@ -44,7 +44,7 @@ int main(){
                     printf("Enter your key:\n");
                     char 2;
                     scanf("%d", &2);
-        encryptsubkey(1,2); break;
+        encryption(1,2); break;
         case 'd': 
                     printf("Enter a word :\n");
                     char 1;
@@ -52,7 +52,7 @@ int main(){
                     printf("Enter your key:\n");
                     char 2;
                     scanf("%d", &2);
-        decryptsubkey(1,2); break;
+        decryption(1,2); break;
         default: printf("unknown option %d\n Please enter a, b, c or d\n", a);
         }
         
@@ -126,7 +126,7 @@ int main(){
 //#include <stdio.h>
 //#include <string.h>
 
-char encrpytion (char cipher_text, char key)
+char encryption (char cipher_text, char key)
 
 char alpha[26] ={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
 char key [26];
