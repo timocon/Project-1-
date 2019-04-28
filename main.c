@@ -141,7 +141,7 @@ char encryption (char cipher_text[], char key[26])
 
 char alpha[26] ={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
 //char key [26];
-//char cipher_text[];
+//char cipher_text[];   //remove comments to run individual program
 //int main ()
 {
     
@@ -174,7 +174,7 @@ char alpha[26] ={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p'
     
     
    // key = c_text;
-    printf("\nYour encrypted msg is: %s", msg);
+    printf("\nYour encrypted msg is: %s\n", msg);
     return msg;
 }
 /////////////////////////////////////////////////////////////////////////////////////
@@ -203,7 +203,7 @@ char alpha[26] ={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p'
     printf("\n Your encrypted text message is : %s", msg);
     
     int i, j;
-    printf("\nenter the unique key of 26 characters for encryption :");
+    printf("\nenter the unique key of 26 characters for decryption :");
     scanf("%s", key);
     printf("\ncharacter replaced\n");
     printf("\n%s\n", key);
@@ -225,7 +225,7 @@ char alpha[26] ={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p'
     
     
    // key = c_text;
-    printf("\nYour decrypted msg is: %s", msg);
+    printf("\nYour decrypted msg is: %s\n", msg);
     return msg;
 }
 ///////////////////////////////////////////////////////////////
